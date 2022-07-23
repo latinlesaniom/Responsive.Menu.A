@@ -1,0 +1,156 @@
+:root{
+    --first-color: #243840;
+    --Second_color: #152126;
+    --Third-color: #403501;
+    --fourth-color: #D9BF3D;
+    --five-color: #D9C7B8;
+    --white: #ffffff;
+    --Anonymous: "Anonymous Pro", monospace;
+    --Libre: Roboto, sans-serif;
+    --font-size: 1.5rem;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--Anonymous);
+}
+
+h1,
+h2,
+h3{
+    margin: 0;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+#Header{
+    background-color: var(--first-color);
+    padding: .5rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Header .tittle{
+    align-self: center;
+    font-size: 16px;
+    color: var(--white);
+    font-size: var(--font-size);
+    padding: 1rem;
+    font: lighter;
+    width: 50%;
+}
+
+#Header #nav{
+    margin: 0 auto;
+    width: 20%;
+    align-self: center;
+}
+
+#Header #nav ul {
+    display: flex;
+    color: var(--white);
+    justify-content: space-between;
+    list-style-type: none;
+    padding: .5rem;
+    font-size: 16px;
+    font: bold;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 1232px) {
+  #menu {
+        position: absolute;
+        width: 100%;
+        top: 68px;
+        right: 0px;
+        background: var(--Third-color);
+        transition: 0.6s;
+        gap: 1rem;
+        visibility: hidden;
+    }
+
+    #Header{
+        background-color: var(--Second_color);
+    }
+
+    #Header .tittle{
+        width: 70%;
+    }
+
+    #nav.active #menu {
+        padding: 2.5rem;
+        visibility: visible;
+        overflow-y: auto;
+      }
+
+      #menu a {
+        padding: 1rem;
+        border-radius: .2rem;
+        font-size: 1rem;
+        font: bold;
+        background-color: var(--five-color);
+        color: var(--Second_color);
+      }
+      
+      #btn-mobile{
+        display: block;
+        padding:1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        border-top: 1px solid;
+        width: 4rem;
+
+      }
+
+      #hamburguer::after,
+      #hamburger::before {
+        content: '';
+        display: flex;
+        width: 5rem;
+        height: .5rem;
+        transition: 0.3s;
+        background-color: var(--five-color);
+      }
+ 
+      #nav.active #hamburger::before {
+        transform: rotate(720deg);
+        background-color: var(--fourth-color);
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
